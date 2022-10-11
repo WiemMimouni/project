@@ -29,4 +29,4 @@
         alerte("It's not a good fact")
     }
  }
- alert("you got"+ score )
+ alert("you got"+ score ) ;

@@ -7,24 +7,29 @@
     <title>project1</title>
     <link rel="stylesheet" href="style.css">
 </head>
-       <h1 id="name">Be Mentally Safe!</h1>
-       <hr>
-       <h1 id="quiz">Take Quiz!</h1>
+      
+      
 <body>
-   <hr>
-   <div id="f1" >
-     <p><b>let's get to know you first :</b></p>
-    </div>
-     <div id="F1">
-     <input type="text" name="firstName" id="FF1" placeholder=FirstName>.<br><br>
+     <div id="intro">
+        <h1 id="yes">Be Mentally Safe!</h1>
+        <h2 id="headerText">Take Quiz!</h2><br>
+     </div>
+
+   <div id="greetingInput" >
+    
+     <input type="text" name="firstName" id="userName" placeholder=FirstName>
      <button onclick="greeting()">Submit</button>
     </div>
 
     <div id="Quiz">
-        <h3 id="qst1"></h3>
+        <h3 id="question"></h3>
         <div id="answerA" onclick="aFunction()">Yes</div>
         <div id="answerB" onclick="bFunction()">No</div><br>
         <div id="qst1button" onclick="submitQn1()"><button>Submit Qn1</button></div>
+        <div id="qst2button" onclick="submitQn2()"><button>Submit Qn2</button></div>
+        <div id="qst3button" onclick="submitQn3()"><button>Submit Qn3</button></div>
+        <div id="qst4button" onclick="submitQn4()"><button>Submit Qn4</button></div>
+        <div id="qst5button" onclick="submitQn5()"><button>Submit Qn5</button></div>
 
 
 
@@ -33,8 +38,8 @@
 
   
    <style>
-    #F1{text-align: center; color:floralwhite; back}
-     #f1{text-align: center;}
+    #intro{text-align: center; color:black }
+    #greetingInput{text-align: center ;color: black }
      #Quiz {text-align: center ; color:black}
     </style>
  
@@ -42,22 +47,27 @@
 
 
     <script>
-        let userName = document.querySelector("#FF1");
-        let f1=document.querySelector("#F1");
-        
+        let userName = document.querySelector("#userName");
+        let headerText=document.querySelector("#headerText");
+        let greetingInput=document.querySelector("#greetingInput")
         let quiz=document.querySelector("#Quiz");
-        let question1 =document.querySelector("#qst1")
+        let qn1Button=document.querySelector("#qst1button");
+        let qn2Button=document.querySelector("#qst2button");
+        let qn3Button=document.querySelector("#qst3button");
+        let qn4Button=document.querySelector("#qst4button");
+        let qn5Button=document.querySelector("#qst5button");
+        let question =document.querySelector("#question")
         let answerA=document.querySelector("#answerA");
         let answerB=document.querySelector("#answerB");
         let iterationNumber =0 ;
         let qnchoice= "" ; 
         let score= 0 ;
-        let questionList [
+        let questionList=  [
            "Do you have problems with sleeping?" ,
            "Do you feel sad or down suddenly ?",
            "Do you struggle from excessive fears or worries , or extreme feelings of guilt ?",
            "Do you suffer from tiredness all the time with low energy?",
-           "Do you have the desire to withdrawl from friends and activities?",
+           "Do you have the desire to withdrawl from friends and activities?"
 
         ]
        
@@ -66,12 +76,12 @@
 
 
         function greeting(){
-            f1.innerHTML = "" ;
-            f1.innerHTML= "welcome in my quiz " + userName.value ;
-            F1.style.display= "none" ;
+            headerText.innerHTML = "" ;
+            headerText.innerHTML= "welcome in my quiz " + userName.value ;
+            greetingInput.style.display= "none" ;
            
             quiz.style.display = "block";
-             qst1.innerHTML=questionList[iterationNumber];
+             question.innerHTML=questionList[iterationNumber];
         }
 
         function aFunction() {

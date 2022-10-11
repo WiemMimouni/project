@@ -1,7 +1,7 @@
 
-@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap")
+/* @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap") */
  
-* {
+*{
     margin: 0 ;
     padding: 0;
     box-sizing: border-box;
@@ -10,7 +10,7 @@
 body {
     font-family: "Nunito" , sans-serif;
     min-height: 100vh;
-    background-color: aliceblue;
+    background-color: rgb(33, 188, 219);
 }
 
 #name {
@@ -26,5 +26,9 @@ body {
 }
 #quiz {
     text-align: center;
-    color:rgb(157, 219, 33)
+    color:black
+
+}
+#result {
+    font-size:100;
 }
